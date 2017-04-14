@@ -7,10 +7,7 @@ html, body {
 
 body {
   background: rgb(29,36,54); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(29,36,54,1) 0%, rgba(68,72,121,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(29,36,54,1) 0%,rgba(68,72,121,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to top, rgba(29,36,54,1) 0%,rgba(68,72,121,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2436', endColorstr='#444879',GradientType=1 ); /* IE6-9 */
   background-attachment: fixed;
   background-repeat: none;
 }
@@ -21,13 +18,11 @@ body {
   height: 100%;
 }
 
-
 form {
   width: 100%;
   left: 0;
   position: relative;
   top: calc(50% - 120px);
-  transition: all 0.3s ease;
   transition: all 0.6s cubic-bezier(0.63, 0.11, 0, 0.96);
 }
 
@@ -74,8 +69,6 @@ form.slide-up {
   padding: 10px 40px 15px 40px;
   width: 100%;
   border: none;
-  /*border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;*/
   border-bottom: 1px solid #424565;
   background: transparent;
   font-size: 16px;
@@ -104,14 +97,6 @@ form.slide-up .search-input {
 
 .search-input:focus + .search-icon {
   fill: #00bdb0;
-}
-
-.search-button {
-  border: none;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  background: #393c5d;
-  padding: 0 20px;
 }
 
 .search-results {
