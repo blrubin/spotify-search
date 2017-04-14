@@ -6,6 +6,7 @@ const searchOptions = document.querySelectorAll('.search-options button');
 let searchSlideUp = false;
 
 function getResults (input) {
+
   const searchType = document.querySelector('.active').innerHTML.toLowerCase();
   let query = input;
   const endpoint = `https://api.spotify.com/v1/search?type=${searchType}&q=${query}`;
@@ -37,6 +38,7 @@ function getResults (input) {
 }
 
 function displayResults(data, type) {
+
   type = type + 's';
   let results = data[type].items;
 
@@ -84,7 +86,9 @@ var slideUp = function () {
 }
 
 form.addEventListener('submit', (e) => {
+
   e.preventDefault();
+
   if (!searchSlideUp) {
     searchSlideUp = !searchSlideUp;
     form.classList.add('slide-up');
@@ -93,14 +97,17 @@ form.addEventListener('submit', (e) => {
 });
 
 searchInput.addEventListener('keyup', (e) => {
+
   if (!searchSlideUp) {
     searchSlideUp = !searchSlideUp;
     form.classList.add('slide-up');
   }
+
   getResults(searchInput.value);
 });
 
 searchOptions.forEach( option => {
+
   option.addEventListener('click', () => {
     const activeOption = document.querySelector('.active');
     activeOption.classList.remove('active');
