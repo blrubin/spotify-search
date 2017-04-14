@@ -105,5 +105,6 @@ searchOptions.forEach( option => {
     const activeOption = document.querySelector('.active');
     activeOption.classList.remove('active');
     option.classList.add('active');
+    getResults(searchInput.value);
   })
-})
+});
